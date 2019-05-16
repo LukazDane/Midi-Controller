@@ -2,7 +2,7 @@
 
 This project is the precursor to an upcomming Raspberry Pi midi/synth project. The goal is to recreate a simplidied digital version of a Midi Fighter, a 4 x 4 midi synth controller.
 
-###Current status:
+### Current status:
 
 > Sound files added
 > 9 buttons mapped
@@ -11,7 +11,7 @@ This project is the precursor to an upcomming Raspberry Pi midi/synth project. T
 > metronome bpm adjust added
 > metronome stop with spacebar
 
-###Next Steps:
+### Next Steps:
 
 > map 7 more keys
 > add onclick funtion(for this version only)
