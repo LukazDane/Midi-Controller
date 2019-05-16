@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Midi Controller Simulator</title>
+  </head>
+  <body>
+    <div class="keypad">
+      <div class="keys">
+        <div class="metronome">
+          <div class="player">
+            <div>
+              <span class="beats"></span>
+              <span class="bpm">BPM</span>
+            </div>
+            <div>
+              <button class="play">
+                <!-- .fa and .fa-play are font awesome class styles -->
+                <span class="play-text fa fa-play"></span>
+              </button>
+            </div>
+          </div>
+          <input class="beat-slider" type="range" min="0" max="42" value="20" />
+          <script type="text/javascript" src="metronome.js"></script>
+        </div>
+      </div>
+      <div class="keys">
+        <div data-key="65" class="key">
+          <span>A</span> <span class="sound"></span>
+        </div>
+        <div data-key="83" class="key">
+          <span>S</span> <span class="sound"></span>
+        </div>
+        <div data-key="68" class="key">
+          <span>D</span> <span class="sound"></span>
+        </div>
+      </div>
+      <div class="keys" id="page 1">
+        <div data-key="70" class="key">
+          <span>F</span> <span class="sound"></span>
+        </div>
+        <div data-key="71" class="key">
+          <span>G</span> <span class="sound"></span>
+        </div>
+        <div data-key="72" class="key">
+          <span>H</span> <span class="sound"></span>
+        </div>
+      </div>
+      <div class="keys">
+        <div data-key="74" class="key">
+          <span>J</span> <span class="sound"></span>
+        </div>
+        <div data-key="75" class="key">
+          <span>K</span> <span class="sound"></span>
+        </div>
+        <div data-key="76" class="key">
+          <span>L</span> <span class="sound"></span>
+        </div>
+      </div>
+      <!-- page 2 -->
+      <!-- <div class="keys" id="page 2">
+        <div data-key="70" class="key">
+          <span>F</span> <span class="sound"></span>
+        </div>
+        <div data-key="71" class="key">
+          <span>G</span> <span class="sound"></span>
+        </div>
+        <div data-key="72" class="key">
+          <span>H</span> <span class="sound"></span>
+        </div>
+      </div>
+      <div class="keys">
+        <div data-key="74" class="key">
+          <span>J</span> <span class="sound"></span>
+        </div>
+        <div data-key="75" class="key">
+          <span>K</span> <span class="sound"></span>
+        </div>
+        <div data-key="76" class="key">
+          <span>L</span> <span class="sound"></span>
+        </div>
+      </div> -->
+
+      <!-- Page 3 -->
+      <!-- <div class="keys" id="page 1">
+        <div data-key="70" class="key">
+          <span>F</span> <span class="sound"></span>
+        </div>
+        <div data-key="71" class="key">
+          <span>G</span> <span class="sound"></span>
+        </div>
+        <div data-key="72" class="key">
+          <span>H</span> <span class="sound"></span>
+        </div>
+      </div>
+      <div class="keys">
+        <div data-key="74" class="key">
+          <span>J</span> <span class="sound"></span>
+        </div>
+        <div data-key="75" class="key">
+          <span>K</span> <span class="sound"></span>
+        </div>
+        <div data-key="76" class="key">
+          <span>L</span> <span class="sound"></span>
+        </div>
+      </div> -->
+      <div class="keys">
+        <div data-key="192" class="key">
+          <input id="stopButton" type="button" value="Stop All Audio" />
+        </div>
+      </div>
+    </div>
+
+    <audio
+      data-key="65"
+      src="sounds/Vocals/Vocal Loops/Cymatics - Titan Vocal Loop 1 - 100 BPM C Min.wav"
+      preload="auto"
+    ></audio>
+    <audio
+      data-key="83"
+      src="sounds/Vocals/Vocal Loops/Cymatics - Titan Vocal Loop 11 - 140 BPM C Min.wav"
+      preload="auto"
+    ></audio>
+    <audio
+      data-key="68"
+      src="/Users/lukazphelps/Desktop/Midi Controller /sounds/Vocals/Vocoder Loops/Cymatics - Titan Vocoder Loop 9 - 140 BPM C Min.wav"
+      preload="auto"
+    ></audio>
+    <audio
+      data-key="70"
+      src="sounds/Drums - One Shots/Snares/Cymatics - Pop Snare 2 - F#.wav"
+      preload="auto"
+    ></audio>
+    <audio
+      data-key="71"
+      src="sounds/FX/Risers/Cymatics - Dubstep Riser 4 - 150 BPM G.wav"
+      preload="auto"
+    ></audio>
+    <audio
+      data-key="72"
+      src="sounds/FX/White Noise/Cymatics - Tension White Noise Down 11 - 140 BPM.wav"
+      preload="auto"
+    ></audio>
+    <audio
+      data-key="74"
+      src="sounds/Synths - Loops/Chord Loops/Cymatics - Titan Chord Loop 11 - 100 BPM A Min.wav"
+      preload="auto"
+    ></audio>
+    <audio
+      data-key="75"
+      src="sounds/Synths - Loops/Chord Loops/Cymatics - Titan Chord Loop 4 - 100 BPM D Min.wav"
+      preload="auto"
+    ></audio>
+    <audio
+      data-key="76"
+      src="sounds/Synths - Loops/Chord Loops/Cymatics - Pop Synth Loop 5 - 100 BPM A Maj.wav"
+      preload="auto"
+    ></audio>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
